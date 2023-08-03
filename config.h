@@ -1,6 +1,15 @@
-#pragma once
+#define CMDLENGTH 100
+#define DELIMITER " "
+#define CLICKABLE_BLOCKS 1
 
-#define CLICKABLE_BLOCKS  1     // Enable clickability for blocks
-#define CMDLENGTH         45    // Trim block output to this length
-#define DELIMITER         "  "  // Delimiter string used to separate blocks
-#define LEADING_DELIMITER 0     // Whether a leading separator should be used
+const Block blocks[] = {
+	BLOCK("clock",	      60,   1),
+	BLOCK("cpuusage",		5,	17),
+	BLOCK("cputemp",		5,	15),
+	BLOCK("gputemp",		5,	15),
+	BLOCK("memory",	10,	14),
+	BLOCK("volume",	0,	   10),
+	BLOCK("internet",	30,  	4),
+	BLOCK("nettraf",	1, 	18),
+	BLOCK("system-icon",	0, 	13)
+};
